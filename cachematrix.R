@@ -56,7 +56,7 @@ cacheSolve <- function(x, ...) {
     # Check that inverse was actually cached
     if ( is.null(inverse) )
     {   # The inverse is not yet cached, so solve and cache it now
-        inverse = solve(x$Get(), ...)
+        inverse <- solve(x$Get(), ...)
         x$SetInverse(inverse)
     }
 
